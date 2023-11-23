@@ -1,0 +1,54 @@
+GET http://localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDA2OTAzNzUsImV4cCI6MTcwMDY5Mzk3NSwiYXVkIjoiNjU1ZTc5OTJiYmU4ZjZmMzNlNzgwZDZjIiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ.kC_iA545o4cD0KsCfmCcNxMVOpewSsH1xo4cBS3NX_s
+
+###Login Route
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "mapa@gmail.com",
+    "password": "mapa"
+     
+}
+
+###Register Route
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "email": "sim3@gmail.com",
+    "password": "ayouboues2001"
+
+}
+
+###Refresh token  Route
+POST http://localhost:3000/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDA2OTAzOTQsImV4cCI6MTcwMDY5Mzk5NCwiYXVkIjoiNjU1ZTc5OTJiYmU4ZjZmMzNlNzgwZDZjIiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ.YgCzsxxKetbbxPmWr_pOz7Rrqir0bBvaPtu7FHL9HRQ" 
+}
+
+###logout Route
+DELETE http://localhost:3000/auth/logout
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDA2OTAzOTQsImV4cCI6MTcwMDY5Mzk5NCwiYXVkIjoiNjU1ZTc5OTJiYmU4ZjZmMzNlNzgwZDZjIiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ.YgCzsxxKetbbxPmWr_pOz7Rrqir0bBvaPtu7FHL9HRQ" 
+}
+
+### Forgot Password Route
+POST http://localhost:3000/auth/forgot-password
+Content-Type: application/json
+
+{
+    "email": "mapa@gmail.com"
+}
+
+### Reset Password Route
+POST http://localhost:3000/auth/reset-password/your_reset_token
+Content-Type: application/json
+
+{
+    "password": "pama"
+}
